@@ -1,3 +1,5 @@
+/* Home.css */
+
 /* Container for the entire content */
 .content {
   display: flex;
@@ -5,21 +7,16 @@
   align-items: center;
   gap: 20px; /* Adjust the space between elements */
   text-align: center; /* Center-align text within the container */
+  background-image: url('../images/pretty2.jpg'); /* Add background image */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-position: center; /* Center the background image */
   padding: 50px; /* Add padding to the container */
   color: #161414; /* Set text color to white */
 }
 
-/* Image container */
-.image-container {
-  background-image: url('../images/pretty3.jpg'); /* Adjust the path to match the location of 'pretty3.jpg' */
-  background-size: cover;
-  background-position: center;
-  /* Other styles for the image container */
-}
-
-/* Floating image */
+/* Image */
 .floating-image {
-  width: 600%; /* Make the image responsive to its container's width */
+  width: 100%; /* Make the image responsive to its container's width */
   max-width: 600px; /* Set a maximum width for the image */
   border: 10px solid #d67607; /* Add a border to the image */
   border-radius: 10px; /* Apply rounded corners to the border */
@@ -33,34 +30,29 @@ p {
   line-height: 1.6; /* Increase line height for better readability */
   margin-bottom: 20px; /* Add space between paragraphs */
 }
-
-/* Event information container */
+/* Home.css */
 .event-info {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-/* Event image */
 .event-image {
   width: 200px;
   height: auto;
   margin-right: 20px;
 }
 
-/* Event details */
 .event-details {
   flex: 1;
 }
 
-/* Event details heading */
 .event-details h3 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 20px;
 }
 
-/* Event details paragraphs */
 .event-details p {
   margin: 0;
 }

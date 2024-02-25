@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import Newsletter from './Newsletters'; // Adjust the path based on your directory structure
+import Newsletter from './Newsletter'; // Adjust the import path based on your directory structure
 import AddNewsletterForm from './AddNewsletterForm'; // Import the AddNewsletterForm component
+import './Newsletter.css'; // Import the CSS file for styling if needed
+import newslettersData from '../pages/newsletterData'; // Import newslettersData instead of newsletterData
 
 const NewsletterPage = () => {
-  const [previousNewsletters, setPreviousNewsletters] = useState([]);
+  const [previousNewsletters, setPreviousNewsletters] = useState(newslettersData); // Use newslettersData instead of newsletterData
   const [showAddForm, setShowAddForm] = useState(false); // State to control the visibility of the add newsletter form
 
   const handleAddNewsletterClick = () => {
@@ -11,32 +13,14 @@ const NewsletterPage = () => {
   };
 
   const handleAddNewsletter = (newsletterData) => {
-    // For static data, you may not need to add new newsletters
-    // Instead, you can update the state to display the added newsletter
+    // Ensure unique IDs for new newsletters
+    newsletterData.id = Date.now(); // Example: Using timestamp as ID
     setPreviousNewsletters(prev => [...prev, newsletterData]);
     setShowAddForm(false); // Close the form after adding newsletter
   };
-  const sampleNewsletters = [
-    {
-      id: 1,
-      title: "Newsletter 1",
-      imageUrl: "/newsletterFeb24", // Replace with the actual URL of your image
-      content: "Content of newsletter 1",
-      date: "2024-02-01",
-    },
-    {
-      id: 2,
-      title: "newsletterFeb17",
-      imageUrl: "/newsletter2.jpg", // Replace with the actual URL of your image
-      content: "Content of newsletter 2",
-      date: "2024-02-08",
-    },
-    // Add more newsletters as needed
-  ];
-  
 
   return (
-    <div>
+    <div className="newsletter-page">
       <h1>Previous Newsletters</h1>
       {previousNewsletters.map(newsletter => (
         <Newsletter key={newsletter.id} newsletter={newsletter} />

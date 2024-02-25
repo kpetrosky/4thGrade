@@ -28,8 +28,8 @@ const NewsletterPage = () => {
 
   return (
     <div>
-      <h1>Current Newsletter</h1>
-      {currentNewsletter && (
+      <h1>Previous Newsletter</h1>
+      {previousNewsletters && (
         <div>
           <h2>{currentNewsletter.title}</h2>
           <p>Date: {currentNewsletter.date}</p>

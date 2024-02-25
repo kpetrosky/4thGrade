@@ -1,6 +1,6 @@
 import React from 'react';
 
-const setCurrentNewsletter = ({ setCurrentNewsletter }) => {
+const CurrentNewsletter = ({ currentNewsletter }) => {
   if (!currentNewsletter) {
     return null; // Return null if there is no current newsletter
   }

@@ -6,6 +6,7 @@ import Home from './components/pages/Home'; // Import the Home component
 import About from './components/pages/About'; // Import the About component
 import Newsletters from './components/pages/Newsletters'; // Import the Newsletters component
 import LearningAppList from './components/pages/LearningAppList'; // Import the LearningAppList component
+import LearningApp from "./components/pages/LearningApps"
 
 function App() {
   return (

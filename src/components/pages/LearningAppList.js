@@ -1,15 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const LearningAppList = () => {
   // Define an array of learning apps
   const learningApps = [
-    { id: 1, name: 'Starfall', category: 'Practice' },
-    { id: 2, name: 'Codecademy', category: 'Programming and Development' },
-    { id: 3, name: 'Khan Academy', category: 'Math and Science' },
-    { id: 4, name: 'Skillshare', category: 'Art and Creativity' },
-    { id: 5, name: 'Khan Academy SAT Prep', category: 'Test Preparation' },
-    { id: 6, name: 'TED-Ed', category: 'Personal Development' },
+    { id: 1, name: 'Starfall', category: 'Practice', url: 'https://www.starfall.com/h/' },
+    { id: 2, name: 'Education', category: 'Practice2', url: 'https://www.education.com/?gad_source=1&gclid=Cj0KCQiA5-uuBhDzARIsAAa21T8HmgLOlCY-9KP-llUhlCDPBSW_TZ3OOPw9wti2zRwjLAZk2TA1SlUaApc3EALw_wcB' },
+    { id: 3, name: 'Khan Academy', category: 'Skills', url: 'https://www.khanacademy.org/' },
+    { id: 4, name: 'Prodigy', category: 'Math skills', url: 'https://www.prodigygame.com/main-en/' },
     // Add more learning apps as needed
   ];
 
@@ -26,7 +23,7 @@ const LearningAppList = () => {
         <tbody>
           {learningApps.map((app) => (
             <tr key={app.id}>
-              <td><Link to={`/LearningApps/${app.id}`}>{app.name}</Link></td>
+              <td><a href={app.url} target="_blank" rel="noopener noreferrer">{app.name}</a></td>
               <td>{app.category}</td>
             </tr>
           ))}
