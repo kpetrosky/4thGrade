@@ -1,0 +1,20 @@
+/* Header.css */
+.header {
+  background-image: url('./images/pretty.png'); /* Set background image */
+  background-size: cover; /* Cover the entire header */
+  background-position: center; /* Center the background image */
+  padding: 10px; /* Add padding */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+}
+
+.other-image {
+  float: right; /* or use flexbox, grid, or any other positioning method */
+  /* Add any other necessary styling */
+}
+.small-image {
+  width: 200px;
+  height: 200px;
+}

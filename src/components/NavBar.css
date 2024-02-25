@@ -1,0 +1,42 @@
+/* src/components/Navbar.css */
+.navbar {
+  background-color: #9c33b1;
+  color: #801a1a; /* Change the font color to dark gray */
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  
+  
+}
+
+  
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    padding: 15;
+  }
+  
+  .navbar-item {
+    margin-right: 175px;
+  }
+  
+  .navbar-item:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar-item a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navbar-item a:hover {
+    text-decoration: underline;
+  }
+  .small-image {
+    width: 200px;
+    height: 200px;
+  }
+  .other-image {
+    float: right; /* or use flexbox, grid, or any other positioning method */
+    /* Add any other necessary styling */
+  }
